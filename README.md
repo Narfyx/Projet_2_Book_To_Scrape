@@ -29,31 +29,41 @@ pip install -r requirements.txt --break-system-packages
 
 ## Usage
 
-```python
 examples:
-#for scrap single book
+-for scrap single book
+```python
 python main.py -s -u "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
-#for scrap category
+```
+
+examples:
+-for scrap category
+```python
 python main.py -c -u "http://books.toscrape.com/catalogue/category/books/mystery_3/index.html"
-#for scrap all category
+```
+
+examples:
+-for scrap all category
+```python
 python main.py -a -u "http://books.toscrape.com/index.html"
 ```
 
-if you want to name your csv file (work only for sigle book):
+if you want to name your csv file (work only for single book):
 
-```python
 examples:
-#for scrap single book
+-for scrap single book
+```python
 python main.py -s -u "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html" --name "Book number 1"
 ```
 The downloaded csv and images will be saved in the "data" folder.
 
 ## Run in venv
 
+-for windows:
 ```python
-for windows:
 c:\>Python35\python -m venv c:\path\to\Projet_2_Book_To_Scrape
-for linux:
+```
+-for linux:
+```python
 python -m venv /path/to/Projet_2_Book_To_Scrape
 ```
 
