@@ -1,6 +1,5 @@
 import utils
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import requests
+
 
 
 
@@ -98,7 +97,7 @@ def grep_book_informations(product_page_url):#récupère toutes les informations
 
 
 def get_status_url(url) -> str:
-    return ("valide" if requests.get(url).status_code == 200 else "invalide"), url
+    return ("valide" if utils.requests.get(url).status_code == 200 else "invalide"), url
 
 def try_to_connect_and_grep_books_information(list) -> dict:
     books = {}
@@ -113,10 +112,10 @@ def try_to_connect_and_grep_books_information(list) -> dict:
     # URLs sont traitées.
 
     # Utiliser un ThreadPoolExecutor pour exécuter plusieurs tâches en parallèle
-    with ThreadPoolExecutor(max_workers=1) as executor:  # ajuste le nombre de 'worker' (ce sont les threads cpu)
+    with utils.ThreadPoolExecutor(max_workers=1) as executor:  # ajuste le nombre de 'worker' (ce sont les threads cpu)
         futures = {executor.submit(get_status_url, url): url for url in list} #envoie en parallèle les requêtes http qui se trouve dans la list à la fonction get_status_url
         #quand une requête à un retour et traité par la fonction get_status_url elle est considéré comme terminée
-        for future in as_completed(futures):#pour chaque 'future' dans les requêtes terminées
+        for future in utils.as_completed(futures):#pour chaque 'future' dans les requêtes terminées
             status, url = future.result()
             print(f"\t url {status} = {url}\r", end='')
 

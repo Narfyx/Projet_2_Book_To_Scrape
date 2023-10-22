@@ -1,8 +1,6 @@
 import utils
 
-#python main.py -s -u "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
-#python main.py -c -u "http://books.toscrape.com/catalogue/category/books/mystery_3/index.html"
-#python main.py -a -u "http://books.toscrape.com/index.html"
+
 
 if __name__ == '__main__':
     try:

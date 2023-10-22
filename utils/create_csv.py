@@ -1,28 +1,9 @@
 import utils
-import os
-
-
-
-def file_location(value):
-    folder_name = value  # Replace with your desired folder name
-    if not os.path.exists(folder_name):
-        os.mkdir(folder_name)
-
-    return folder_name
-
-
-def save_img(images_url, titles, upc, name_folder_img):
-    for index, image_url in enumerate(images_url):
-        img_folder = file_location('data/img/')
-        path = file_location(f'data/img/{name_folder_img}/')
-        utils.urllib.request.urlretrieve('http://' + image_url, f"{path}{upc[index]}.jpg")
-        print(f"download image of: {titles[index]}")
-
 
 
 
 def write_csv(books, name_file):
-    folder = file_location('data/')
+    folder = utils.location_file.file_location('data/')
     print("\n")
     book_dict = {
     'product_page_url:': [],
@@ -58,7 +39,7 @@ def write_csv(books, name_file):
         df.to_csv(f'{folder}{name_file}.csv', sep='\t', encoding='utf-8', index=False)
     print(f"CSV file '{name_file}' created successfully.")
     
-    save_img(images_url = book_dict['image_url:'], titles=book_dict['search_title:'], upc=book_dict['universal_product_code:'], name_folder_img=name_file)
+    utils.get_image_book.save_img(images_url = book_dict['image_url:'], titles=book_dict['search_title:'], upc=book_dict['universal_product_code:'], name_folder_img=name_file)
 
 
 
