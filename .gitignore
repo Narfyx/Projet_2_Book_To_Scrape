@@ -1,0 +1,14 @@
+data/
+test.txt
+.vscode/
+pyvenv.cfg
+include/
+lib/
+lib64
+share/
+bin/
+/utils/__pycache__/
+/utils/test.py
+test.py
+
+

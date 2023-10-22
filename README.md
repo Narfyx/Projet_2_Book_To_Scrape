@@ -29,19 +29,19 @@ pip install -r requirements.txt --break-system-packages
 
 ## Usage
 
-examples:
+example:
 -for scrap single book
 ```python
 python main.py -s -u "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html"
 ```
 
-examples:
+example:
 -for scrap category
 ```python
 python main.py -c -u "http://books.toscrape.com/catalogue/category/books/mystery_3/index.html"
 ```
 
-examples:
+example:
 -for scrap all category
 ```python
 python main.py -a -u "http://books.toscrape.com/index.html"
@@ -49,7 +49,7 @@ python main.py -a -u "http://books.toscrape.com/index.html"
 
 if you want to name your csv file (work only for single book):
 
-examples:
+example:
 -for scrap single book
 ```python
 python main.py -s -u "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html" --name "Book number 1"
