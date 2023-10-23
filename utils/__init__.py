@@ -8,7 +8,7 @@ import utils.location_file
 
 
 #Modules
-import requests, csv, argparse, urllib.request, os
+import requests, csv, argparse, urllib.request, os, re
 from pprint import pprint
 from bs4 import BeautifulSoup
 import pandas as pd

@@ -1,4 +1,4 @@
-data/
+
 test.txt
 .vscode/
 pyvenv.cfg
@@ -7,8 +7,7 @@ lib/
 lib64
 share/
 bin/
-/utils/__pycache__/
-/utils/test.py
-test.py
+utils/__pycache__/
+.gitignore
 
 

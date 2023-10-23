@@ -76,7 +76,8 @@ def grep_book_informations(product_page_url):#récupère toutes les informations
     book.append((soup.select('div[class="col-sm-6 product_main"]  h1')[0]).text) #'search_title'
     book.append((soup.select('table[class="table table-striped"]  tr:nth-child(4) td')[0]).text.strip('Â')) #'price_including_tax'
     book.append((soup.select('table[class="table table-striped"]  tr:nth-child(3) td')[0]).text.strip('Â')) #'price_excluding_tax'
-    book.append((soup.select('table[class="table table-striped"]  tr:nth-child(6) td')[0]).text.strip(' availableInstock()')) #'search_number_available'
+    number_available = ((soup.select('table[class="table table-striped"]  tr:nth-child(6) td')[0]).text) #'search_number_available'
+    book.append(utils.re.sub(r'[^0-9]', '', number_available))
     book.append((soup.select('article[class="product_page"] div[id="product_description"] ~ p')[0]).text if soup.select('article[class="product_page"] div[id="product_description"] ~ p') else 'N/A') #'product_description'
 
     # '~ p' signifie "sélectionner tous les éléments <p> qui sont des frères (qui suivent immédiatement) de l'élément précédemment sélectionné".
