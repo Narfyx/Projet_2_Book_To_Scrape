@@ -56,7 +56,7 @@ python main.py -s -u "http://books.toscrape.com/catalogue/a-light-in-the-attic_1
 ```
 The downloaded csv and images will be saved in the "data" folder.
 
-## Run in venv
+## Create venv
 
 -for windows:
 ```python
@@ -66,6 +66,18 @@ c:\>Python35\python -m venv c:\path\to\Projet_2_Book_To_Scrape
 ```python
 python -m venv /path/to/Projet_2_Book_To_Scrape
 ```
+## run venv
+
+-for windows:
+```python
+c:\>path\to\Projet_2_Book_To_Scrape\Scripts\activate.bat
+C:\> <venv>
+```
+-for linux:
+```python
+source /path/to/Projet_2_Book_To_Scrape/bin/activate
+```
+
 
 
 
