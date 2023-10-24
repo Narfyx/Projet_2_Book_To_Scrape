@@ -60,7 +60,7 @@ The downloaded csv and images will be saved in the "data" folder.
 
 -for windows:
 ```python
-c:\>Python35\python -m venv c:\path\to\Projet_2_Book_To_Scrape
+c:\>python -m venv c:\path\to\Projet_2_Book_To_Scrape
 ```
 -for linux:
 ```python
