@@ -71,7 +71,6 @@ python -m venv /path/to/Projet_2_Book_To_Scrape
 -for windows:
 ```python
 c:\>path\to\Projet_2_Book_To_Scrape\Scripts\activate.bat
-C:\> <venv>
 ```
 -for linux:
 ```python
